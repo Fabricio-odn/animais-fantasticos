@@ -1,5 +1,4 @@
 import ScrollSuave from "./modules/scroll-suave.js";
-
 import Accordion from "./modules/accordion.js";
 import TabNav from "./modules/tabnav.js";
 import Modal from "./modules/modal.js";
