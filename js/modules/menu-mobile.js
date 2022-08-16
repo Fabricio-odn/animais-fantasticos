@@ -1,13 +1,14 @@
-import outsideClick from "./outsideclick.js";
+import outsideClick from './outsideclick.js';
 
 export default class MenuMobile {
   constructor(menuButton, menuList, events) {
     this.menuButton = document.querySelector(menuButton);
     this.menuList = document.querySelector(menuList);
-    this.activeClass = "active";
+    this.activeClass = 'active';
 
-    // Define argumentos padrão de events caso não tenha sido definido
-    if (events === undefined) this.events = ["touchstart", "click"];
+    // define touchstart e click como argumento padrão
+    // de events caso o usuário não define
+    if (events === undefined) this.events = ['touchstart', 'click'];
     else this.events = events;
 
     this.openMenu = this.openMenu.bind(this);
@@ -23,10 +24,9 @@ export default class MenuMobile {
   }
 
   addMenuMobileEvents() {
-    this.events.forEach((evento) =>
-      this.menuButton.addEventListener(evento, this.openMenu)
-    );
+    this.events.forEach(evento => this.menuButton.addEventListener(evento, this.openMenu));
   }
+
   init() {
     if (this.menuButton && this.menuList) {
       this.addMenuMobileEvents();
